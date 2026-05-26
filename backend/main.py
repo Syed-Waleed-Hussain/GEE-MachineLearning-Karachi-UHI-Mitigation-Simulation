@@ -8,7 +8,6 @@ import os
 import uvicorn
 
 app = FastAPI()
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -50,7 +49,6 @@ class SimulationParams(BaseModel):
 def get_baseline():
     if baseline_df.empty:
         raise HTTPException(status_code=500, detail="Baseline data not available.")
-    
     data = baseline_df[['latitude', 'longitude', 'LST', 'NDBI', 'NDVI']].to_dict(orient="records")
     return {"data": data}
 
