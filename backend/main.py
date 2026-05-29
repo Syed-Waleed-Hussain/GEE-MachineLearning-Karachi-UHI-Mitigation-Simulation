@@ -15,7 +15,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MODEL_PATH = os.path.join(BASE_DIR, "best_model.joblib")
 SCALER_PATH = os.path.join(BASE_DIR, "scaler.joblib")
