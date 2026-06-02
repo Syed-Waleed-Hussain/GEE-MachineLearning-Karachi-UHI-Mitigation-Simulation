@@ -22,6 +22,7 @@ BASELINE_DATA_PATH = os.path.join(BASE_DIR, "baseline_data.csv")
 METADATA_PATH = os.path.join(BASE_DIR, "model_metadata.json")
 FORECAST_PATH = os.path.join(BASE_DIR, "time_series_forecast.json")
 
+
 try:
     best_model = joblib.load(MODEL_PATH)
     with open(METADATA_PATH, "r") as f:
